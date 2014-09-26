@@ -1,0 +1,32 @@
+my org-files for my blog posts.
+
+* TOPIC LIST
+ - [ ] Modes.
+  - [ ] IDO Mode
+  - [ ] org-mode
+    - [ ] Todo items
+    - [ ] Hyperlinks
+    - [ ] tags, tables
+    - [ ] propertis and columns
+    - [ ] Date and time.
+    - [ ] AGenda views
+    - [ ] Exporting
+  - [ ] magit
+  - [ ] tramp
+  - [ ] Modes for IRC
+  - [ ] Connecting to facebook and other social network using bitlbee.
+  - [ ] Dired mode
+  - [ ] Shell 
+ - [ ] EMACS as an IDE.
+ - [X] Running command by the name/ help/ commands for fixing typos. - Day 6
+ - [ ] Commands for human languages.
+ - [ ] Mark and the region / Killing and moving text / Registers
+ - [ ] Contrlling the display / Multiple buffers / Multiple windows / frames and graphical display
+ - [ ] Search and replacement.
+ - [ ] File handelling.
+ - [ ] Editing compling, testing and mantaining programs.
+ - [ ] Sending mail, reading mail with rmail.
+ - [ ] Dired mode.
+ - [ ] The calendar and the diary.
+ - [ ] Miscellaneous commands
+ - [ ] Customization.
