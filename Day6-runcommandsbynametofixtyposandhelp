@@ -1,0 +1,134 @@
+
+Sixth day of writing my content, I had never thought i would be even writing for this many posts continuously(I am kind of a lazy writer) and I realize this experience of writing blogs and sharing my learnings or acquired knowledge is actually encouraging. I started to think that if I am able to put some extra time and effort, I may also complete a lot of things by taking similar challenegs. My priority ones are loosing weight(I am still finding myself in tough situation on to get myself motivated) and learning the python programming language, which as I had been told is pretty easy to learning. I may get inconsistent at times due to other priorities coming up, but writing my learnings and posting everyday keeps me motivated and keep reminiding me I have pending stuff to do.
+
+Every emacs command has a name which can be used against the convenient key bindings. Most emacs commands doesn't have key bindings so the only way to learn them is to use them as commands, by emacs convention all the command will consist one or more words separated  by '-'. For eg. auto-fill-mode or manual-entry. So to enter a command, type M-x enter the command name RET (to execute), C-g (to cancel). Its something similar to what we discussed in our Day 5, to enter the mini-buffer run the command and execute it and it does work similar for completion as it is to be done in mini-buffer.
+
+well there are many things which we need immediately and overlook to take the effort to read the manual, or say for LISP errors which we might not be aware of, the freenode.org IRC network's #emacs channel is the best place after failed attempt of finding any help on google and emacswiki.org. but again at the same time emacs itself has a very awesome online documentation for reference. Online means it is accessible within emacs all the time. The help commands are easily accessible with 'C-h' help character, after this we usually put the character for which we are seeking help and can be canceled the same way as all the mini-buffers. 'C-h' itself a help option, so typing 'C-h C-h' will print the available help characters. Apart from C-h, F1 can also  be used. I have put some simple stuff about how to ask help in Emacs at <<<put the link here>>. A more detailed list s below.
+
+Similarly apropos are the commands which may answer certain questions as "what are the commands for working with files?". specifying a apropos pattern such as a word, a list of words, or regular expressions, each apropos command display a list of item that matches the pattern in a separate window.
+
+| Commands                               | Description                                                                                               |
+|----------------------------------------+-----------------------------------------------------------------------------------------------------------|
+| C-h a /TOPICS/                         | Searched for the command whose name matches the arguments                                                 |
+| C-h i d m /emacs/ RET i /TOPIC/ RET    | This searches for the topic in the indices of online emacs manual, and prints the first match             |
+|                                        | ',' to jump to the subsequent matches, we can also use regexes here.                                      |
+| C-h i d m /emacs/ RET s /TOPIC/ RET    | Same as above, but instead of just searching the indices, it searches the manual too.                     |
+| C-h C-f                                | Displays the FAQ.                                                                                         |
+| C-h p                                  | Display all the emacs package based on the keywords.                                                      |
+| C-h b                                  | Display all active key bindings                                                                           |
+| C-h c /key/                            | show the name of the command it runs. (describe-key-briefly)                                              |
+| C-h d /TOPICS/ RET                     | Display command and variables whose documentation matches topic. (aprops-documentation)                   |
+| C-h e                                  | Display *Message* Buffer                                                                                  |
+| C-h f /function/ RET                   | Display documentation on the LISP function (describe-function)                                            |
+| C-h h                                  | Display the 'HELLO' file                                                                                  |
+| C-h i                                  | Run info, the GNU documentation browser, the complete emacs document is available online in info          |
+| C-h key                                | Display the name and the documentation of the command that the key runs. (describe-key)                   |
+| C-h l                                  | Description of last 300 keystrokes. (view-lossage)                                                        |
+| C-h f                                  | Display docuemntation of the current major mode. (describe-mode)                                          |
+| C-h n                                  | Display news of recent changes. (view-emacs-news)                                                         |
+| C-h p                                  | find packages by topic keyword. ((finder-by-keyword)                                                      |
+| C-h r                                  | Display the emacs manual. (info-emacs-manual)                                                             |
+| C-h s                                  | Display the current contents of the syntax table, with explanation of what they mean                      |
+|                                        | (describe-syntax)                                                                                         |
+| C-h t                                  | enter the emacs interactive tutorial. (help-with-tutorial)                                                |
+| C-h v /var/ RET                        | Display the doc for the LISP variable var. (describe-variable).                                           |
+| C-h w /command/ RET                    | Show which keys run the command named command. (where-is)                                                 |
+| C-h C /coding/ RET                     | Describe the coding system. (describe-coding-system)                                                      |
+| C-h C RET                              | Describe the coding system current in use.                                                                |
+| C-h F /COMMAND/ RET                    | Enter Info and go to node that documents emacs command /command/. (info-goto-emacs-command-node)          |
+| C-h I /method/ RET                     | Describe the input /method/. (describe-input-method)                                                      |
+| C-h K /key/                            | go to the key-sequence document in Info. (Infp-goto-emacs-key-command-node)                               |
+| C-h L /Language-env/ RET               | Display info on the character set, coding system and input methods. (describe-language-environment)       |
+| C-h S /Symbol/ RET                     | Display the info on the symbol /symbol/ based on the programming mode you are using (info-lookup-symbol)  |
+| C-h .                                  | Display message for the special text area. (display-local-help)                                           |
+| *Apropos*                              |                                                                                                           |
+| C-h a /pattern/ RET                    | Search for command whose names matches the pattern.                                                       |
+| M-x apropos RET /pattern/ RET          | Search for functions(both interactive and non-interactive) and variables whose name matches the /pattern/ |
+| M-x apropos-variable RET /pattern/ RET | Search for a user-option variables matching the /pattern/.                                                |
+| M-x apropos-value RET /pattern/ RET    | search for function whose definition match /pattern/ and variable whose value matches /pattern/           |
+| C-h d /pattern/ RET                    | search for function and variable whose documentation string matches /pattern/                             |
+| *Emacs help files*                     |                                                                                                           |
+| C-h C-c                                | Describe the emacs copying condition. rules for copying and redistributing emacs. (describe-copying)      |
+| C-h C-d                                | Debugging in emacs. (view-emacs-debugging)                                                                |
+| C-h g                                  | Display general information about GNU Project. (describe-gnu-project)                                     |
+| C-h C-m                                | How to order printed copies. (view-order-manual)                                                          |
+| C-h C-n                                | To see the emacs news and listing of new features. (view-emacs-news)                                      |
+| C-h C-o                                | How to get new version. (describe-distribution)                                                           |
+| C-h C-p                                | Tells us about the known emacs problems. (view-emacs-problems)                                            |
+| C-h C-t                                | Display the emacs TODO list, or things that needs to be done. (view-emacs-todo)                           |
+| C-h C-w                                | Describe warranty. (describe-no-warranty)                                                                 |
+| *Commands work in Help mode*           |                                                                                                           |
+| SPC                                    | Scroll forward                                                                                            |
+| DEL                                    | Scroll backard                                                                                            |
+| TAB                                    | Move point forward to next cross refrence                                                                 |
+| S-TAB                                  | Move point backward to previous reference                                                                 |
+| RET                                    | Follow a cross refrence point.                                                                            |
+| C-c C-c                                | Show all documents of symbol at the point.                                                                |
+|----------------------------------------+-----------------------------------------------------------------------------------------------------------|
+
+I just completed through the help documentation in emacs manual, and I am convinced the emacs has got the most extensive documentation an editor could ever have, the above table tries to cover as many things as possible but I am pretty sure, I would have definitely missed things, like this that once on IRC I had been suggested some lisp code to quickly take me to the help page and I missed it. Well, on many modern keyboards F1 as well works to call the help function.
+
+While doing the typing I do make a lot of mistakes and undo is the most fundamental command for correcting the mistakes. C-/ does the same trick as C-x u and C-_ all meant to undo my work. If you see the buffers have been modified accidentaly, the easiest way is to press *C-/* repetadely unless the stars disappears from the mod line. Just press *C-/* to see the last change, so that we can understand if the change was intentional, if yes then we can leave it like this, if no then we can undo by pressing *C-/* repeatedly.
+
+Its much easier to transpose characters in emacs using *C-t*(transpose-chars)  and transpose words using *M-t*(transpose-words) and moves the word containing or preceding point forward as tell, though it does not move any punctutation mark, for eg, FOO, BAR will become BAR, FOO. *C-M-t*(transpose-sexps) is similar to transposing two expressions and *C-x C-t*(transpose-lines) for transposing lines. The numeric command works here, it tell the transpose command to move forward the character before or containing point across several other characters. 
+
+*M-- M-l* Convert last word to lower-case, it is Meta-Minus. *M-- M-u* Convert last word to uppercase. *M-- M-c* convert last word to lowercase with capital letters.
+
+The spell checking ability of any editor should be good for the writer to help check spells on the fly, and emacs does have some nifty commands to do that as well. We need aspell, ispell, hunspell installed on the system for these commands to work. Once started the programs continue to run so that subsequent spell check commands complete more quickly and can be killed using *M-x ispell-kill-ispell* but is not required as it does not uses much memory and only active when spelling correcting is done, these programs using two dictionaries one is the standard dictionary and the other is our defined dictionary. The local dictionary can be defined by "ispell-local-dictionary* or if nil by "ispell-dictionary" or if both is nil then the default dictinary is selected. The variable "ispell-complete-word-dict" specifies the file name for its dictionary and is used for word completion. Flyspell mode is fully automatic mode of checking the words in the buffer as we insert them or edit them, when it finds the words it doesn't recognize it highlights that word. Right now I am seeing my buffer so colorful, thanks to flyspell mode, and my typing :). *M-x flyspell-mode* toggles the flyspell mode, to turn on flyspell mode for all text buffer *turn-on-flyspell-mode* to *text-mode-hook*.
+
+| Key binding                                       | command              | Description                                                               |
+| M-$                                               | ispell-word          | check and correct spelling of active region or word at point.             |
+| M-x ipsell                                        |                      | check or correct spelling in active region or entire buffer.              |
+| M-x ispell-buffer                                 |                      | check and correct spelling in the buffer.                                 |
+| M-x ispell-region                                 |                      | check and correct spelling in the region.                                 |
+| M-x ispell-message                                |                      | check and correct spelling in the draft message, excluding citied content |
+| M-x ispell-change-dictionary RET /Dictionary/ RET |                      | restart ispell/aspell/hunspell using dict as dictionary.                  |
+| M-x ispell-kill-ispell                            |                      | kill the dictionary process                                               |
+| M-TAB / ESC-TAB                                   | ispell-complete-word | complete the word based on the dictinary                                  |
+| M-x flyspell-mode                                 |                      | enable flyspell mode which highlights misspelled words                    |
+| M-x flyspell-prog-mode                            |                      | enable flyspell mode for comments and strings only                        |
+
+When the commands encounter the errors in case of misspelled words, it usually display the numbered "near-misses" close to the incorrect word, then we have to choose the valid response from the below list.
+
+| digit        | replace the word, just this time, with one of the near misses, the near misses are displayed by no. and the no. can be used to select it. |
+| SPC          | skip this word, continue to consider incorrect and don't change.                                                                          |
+| r /NEW/ RET  | replace the word just this time, with the new word.                                                                                       |
+| R /NEW/ RET  | replace the word and do query-replace so it can be replaced everywhere.                                                                   |
+| a            | accept the incorrect word, treat it as correct one, but only in this editing session                                                      |
+| A            | same as above but include the buffer too.                                                                                                 |
+| i            | insert this word in my private dictionary, so it can be treated as a correct word by my spell check applications                          |
+| m            | like i                                                                                                                                    |
+| u            | save the lowercase version of this word to my private dictionary                                                                          |
+| l /word/ RET | Look in the dictinary for the word that match /word/. these words become new list for near-misses.                                        |
+| C-g X        | quit interactive spell checking                                                                                                           |
+| C-g x        | quit interactive spell checking and move point back to where it was when you started spell checking.                                      |
+| C-g q        | quit spell checking and kill the sub process as well.                                                                                     |
+| ?            | show the list of options.                                                                                                                 |
+
+Well. I am done for the Day 6, being emacs such a vast entity as an editor, i spend most of my time going through the help document and manual pages only and write quality content, which should help me or any one else who might want to use my content for his/her reference. I am still at a very primitive level of doing things with emacs, but I am aware I am still to young here. I will put these text on git hub as well, for anyone to help me correcting the content or if adding anything more.
+
+The below is the content I am planning to touch upon during my 30 Days challenge. The checklist is not in any particular order, but just to remind me of the topics what I need to cover.
+
+  - [ ] Modes.
+  - [ ] IDO Mode
+  - [ ] org-mode
+    - [ ] Todo items
+    - [ ] Hyperlinks
+    - [ ] tags, tables
+    - [ ] propertis and columns
+    - [ ] Date and time.
+    - [ ] AGenda views
+    - [ ] Exporting
+  - [ ] tramp
+  - [X] Running command by the name/ help/ commands for fixing typos. - Day 6
+  - [ ] Commands for human languages.
+  - [ ] Mark and the region / Killing and moving text / Registers
+  - [ ] COntrlling the display / Multiple buffers / Multiple windows / frames and graphical display
+  - [ ] Search and replacement.
+  - [ ] File handelling.
+  - [ ] Editing compling, testing and mantaining programs.
+  - [ ] Sending mail, reading mail with rmail.
+  - [ ] Dired mode.
+  - [ ] The calendar and the diary.
+  - [ ] Miscellaneous commands
+  - [ ] Customization.

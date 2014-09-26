@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>day2-theemacsrealestate</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="day2-theemacsrealestate"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014-09-16T00:40+0530"/>
+<meta name="author" content="Om Prakash Singh"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">day2-theemacsrealestate</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 The Emacs Real estate.</a>
+<ul>
+<li><a href="#sec-1-1">1.1 The Screen</a>
+<ul>
+<li><a href="#sec-1-1-1">1.1.1 Point: Where editing takes place</a></li>
+<li><a href="#sec-1-1-2">1.1.2 Echo area: Where the commands and messages appear at bottom of the frame.</a></li>
+<li><a href="#sec-1-1-3">1.1.3 Mode Line: Understanding the mode line.</a></li>
+<li><a href="#sec-1-1-4">1.1.4 The Menu Bar - How to use</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> The Emacs Real estate.</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  This is about the screen organization of emacs, how the text is placed and how the screen is drawn for the editor, this is about telling you how the things in #emacs as they are, and why they are important this way. Though, i should have started understanding it and writng it down on Day 1, but understanding the key contol is equally important to me, if I did not had learned about it, I surely would have faced difficulty closing my emacs and moving around. Now let me just try to see how much I  am understanding about the screen here and how well I can put it in my words. :) ofcourse it is not a tech doc, but this my 30 Days challenege to learn more about emacs and understand emacs for good.
+</p>
+<p>
+I would be mainly using a lot of images compared to lot of writing that, understanding the screen can better be understood by rightly poining to the correct area.
+</p>
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> The Screen</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<p>   Double clicking on the emacs icon does open up a GUI window and similarly typing it on command prompt from withing an X Windows system, I get the emacs as an editor with full flesh and bones, i actually means as an GUI application, like we see for other editors. And when  I do same while I am  on the command prompt with no X support, or with -nw or -t (with emacsclient, will write more about this in coming days.) i get the emacs taking up my entire terminal screen. We will call these frames and emace behaves almost similar in both these frames. It normally starts with just one frame, but many frames can be created. 
+</p>
+<p>
+Each frame consist of several distinct regions. as shown in the picture below.
+</p>
+
+<p>
+The emacs frame consist of these important segments
+</p>
+</div>
+
+<div id="outline-container-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> Point: Where editing takes place</h4>
+<div class="outline-text-4" id="text-1-1-1">
+
+<p>    The place where the cusrsor is present is called as the point in a multiple windows emacs in GUI, the point can be moved by clicking the mouse in the respective region, the active window will have the curson as solid block and will appear to be on the cursor. While working with several buffers each buffer has its own valur for point.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> Echo area: Where the commands and messages appear at bottom of the frame.</h4>
+<div class="outline-text-4" id="text-1-1-2">
+
+<p>if you pause for more than a second in the middle of the command, you can see your commands being echoed in the echo area. it also shows you the error message when the command fails. The messages displayed in the echo area are generally saved in the special buffer calles as <b>Messages</b>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3"><span class="section-number-4">1.1.3</span> Mode Line: Understanding the mode line.</h4>
+<div class="outline-text-4" id="text-1-1-3">
+
+<p>At the bottom of every window there is a mode line. 
+The text displayed on the mode line has the following format
+cs:ch-fr buf        pos line (major minor)
+</p>
+<p>
+o cs  display the character set. 
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">'-'</td><td class="left">implicate no special character set.  see <a href="http://www.gnu.org/software/emacs/manual/html_mono/emacs.html#Coding-Systems">Coding System</a></td></tr>
+<tr><td class="left">'='</td><td class="left">means no coversion, and used for files with no textual data</td></tr>
+<tr><td class="left">'1'</td><td class="left">ISO Latin-1, other characters represent various coding system</td></tr>
+</tbody>
+</table>
+
+
+<p>
+o ch   this usually show 2 dashes 
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">(&ndash;)</td><td class="left">if the buffer is unmodified.</td></tr>
+<tr><td class="left">(**)</td><td class="left">if the buffer is modified.</td></tr>
+<tr><td class="left">'%*'</td><td class="left">for read only buffer if modified.</td></tr>
+<tr><td class="left">'%%'</td><td class="left">otherwise, i.e read only buffer and not modified.</td></tr>
+<tr><td class="left">'-'</td><td class="left">displayed after ch, if the directory is local.</td></tr>
+<tr><td class="left">'@'</td><td class="left">if the directory if buffer is on remote macine is shows @.</td></tr>
+</tbody>
+</table>
+
+
+<p>
+o fr   is the selected frame name, default is F1
+</p>
+<p>
+o buf   usually the name of the file or the buffer.
+</p>
+<p>
+o pos   where there is additional text above the top of the window or below the bottom.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">All</td><td class="left">In case of small buffer and everything visible on screen</td></tr>
+<tr><td class="left">Top</td><td class="left">If you are at the beginning of the buffer</td></tr>
+<tr><td class="left">Bot</td><td class="left">If you are at the bottom of the buffer</td></tr>
+<tr><td class="left">nn%</td><td class="left">nn is the percentage of buffer above the window</td></tr>
+</tbody>
+</table>
+
+
+<p>
+o line   'L' Followed by the line no. at point.
+</p>
+<p>
+o major   Name of the major mode used in buffer, for eg. Text mode, Lisp Mode, Org Mode and so on. 
+</p>
+<p>
+o minor   minor mode are the list of enabled minor modes on top of major mode, for eg visual-line-mode, flyspell-mode
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4"><span class="section-number-4">1.1.4</span> The Menu Bar - How to use</h4>
+<div class="outline-text-4" id="text-1-1-4">
+
+<p>On the graphical display you can just use the mouse to open the menu bar, an arrow to the right of the menu denotes the menu having a sub menu. Many commands in menu bar have ordinary key bindings as well. 
+</p>
+<p>
+On a text terminal menu bar can be opened using 'M-`' or &lt;F10&gt;, or run the command tmm-menubar. Move around the menu bar using up and down arrow key, &lt;RET&gt; i.e enter key, to select the item or C-g to come out of the menu bar mode.
+</p>
+<p>
+I know its been a little late today, but I was quite able to give time one weekends than as on weekdays, I just don't want to loose focus so am trying to keep up with my posts daily, hope these should be helpful, and I am seriously looking forward for your comments and suggestion, so do please keep posting, tomorrow I think I will go more about buffers and frames.
+</p>
+<p>
+All in all I am enjoying and learning so many things while posting and writing.
+</p></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2014-09-16T00:40+0530</p>
+<p class="author">Author: Om Prakash Singh</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
