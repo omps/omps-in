@@ -1,24 +1,12 @@
-my org-files for my blog posts.
+* my org-files for my blog posts.
 
-* TOPIC LIST
- - [ ] Modes.
-  - [ ] IDO Mode
-  - [ ] org-mode
-    - [ ] Todo items
-    - [ ] Hyperlinks
-    - [ ] tags, tables
-    - [ ] propertis and columns
-    - [ ] Date and time.
-    - [ ] AGenda views
-    - [ ] Exporting
-  - [ ] magit
-  - [ ] tramp
-  - [ ] Modes for IRC
-  - [ ] Connecting to facebook and other social network using bitlbee.
-  - [ ] Dired mode
-  - [ ] Shell 
- - [ ] EMACS as an IDE.
- - [X] Running command by the name/ help/ commands for fixing typos. - Day 6
+*** TOPIC LIST
+ - [X] INTRODUCTION
+ - [X] The Emacs real estate
+ - [X] The buffer and the window
+ - [X] Apologies and some more editing.
+ - [X] Minibuffer
+ - [X] Emacs help, UNDO and Spell checking.
  - [ ] Commands for human languages.
  - [ ] Mark and the region / Killing and moving text / Registers
  - [ ] Contrlling the display / Multiple buffers / Multiple windows / frames and graphical display
@@ -30,3 +18,20 @@ my org-files for my blog posts.
  - [ ] The calendar and the diary.
  - [ ] Miscellaneous commands
  - [ ] Customization.
+ - [ ] EMACS as an IDE.
+ - [ ] Modes.
+   - [ ] IDO Mode
+   - [ ] org-mode
+     - [ ] Todo items
+     - [ ] Hyperlinks
+     - [ ] tags, tables
+     - [ ] propertis and columns
+     - [ ] Date and time.
+     - [ ] AGenda views
+     - [ ] Exporting
+   - [ ] magit
+   - [ ] tramp
+   - [ ] Modes for IRC
+   - [ ] Connecting to facebook and other social network using bitlbee.
+   - [ ] Dired mode
+   - [ ] Shell 
