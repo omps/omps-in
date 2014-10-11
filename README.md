@@ -1,37 +1,44 @@
 * my org-files for my blog posts.
 
-*** TOPIC LIST
- - [X] INTRODUCTION
- - [X] The Emacs real estate
- - [X] The buffer and the window
- - [X] Apologies and some more editing.
- - [X] Minibuffer
- - [X] Emacs help, UNDO and Spell checking.
- - [ ] Commands for human languages.
- - [ ] Mark and the region / Killing and moving text / Registers
- - [ ] Contrlling the display / Multiple buffers / Multiple windows / frames and graphical display
- - [ ] Search and replacement.
- - [ ] File handelling.
- - [ ] Editing compling, testing and mantaining programs.
- - [ ] Sending mail, reading mail with rmail.
- - [ ] Dired mode.
+Emacs is one of the most wonderful text editor of all time, most of the users using emacs do not just want to close it and get out of it and consider this as an OS, the potential of its capabilities, simply are mesmerising, I have already started using this for some time, but I am sure I am so less aware about the way it can work and I should work, so after getting inspired reading this post  <a href="http://www.mostlymaths.net/2010/12/emacs-30-day-challenge.html" target="_blank">The Emacs 30 days Challenge</a>, I am putting myself in the same shoes starting today "September 13, 2014", and taking this challenge and might end up being a better emacs user, I would most likely posting everything on the blog, to track my progress, keep notes for future user and share my learnings to all.
+
+I am using a MacBook Pro with emacs version 24.3 installed. Of course, I would remove my previous configuration and set it and use it as a new installed system. I am planning to use my approach of what, why, how, and when to understand and explain objectives around every topic I am going to work on in this 30 days.
+
+I am planning to begin my journey in the following steps, and would like, if you can suggest me issues which you are facing with your existing editor (something like you want to do something in your editor, but couldn't do it due to its limitation and want to know if this is possible to be done in emacs) and we work together to find and fix or meet a workaround.
+
+I have just put my broader stuff that I will be doing with emacs, but am surely going to split it into parts so I too can understand and work on specific sets.
+
+*** TOPICS
+ - [X] [[http://www.omps.in/day-1-30-days-emacs-challenge/][Introduction]]
+ - [X] [[http://www.omps.in/day-2-the-emacs-real-estate/][The Emacs real estate]]
+ - [X] [[http://www.omps.in/day-3-the-buffer-the-window/][The buffer and the window]]
+ - [X] [[http://www.omps.in/day-4-apologies-and-some-more-emacs-editing/][Apologies and some more editing]]
+ - [X] [[http://www.omps.in/day-5-minibuffer/][Minibuffer]]
+ - [X] [[http://www.omps.in/day-6-help-undo-and-spellchecking-with-emacs/][Emacs help, UNDO and Spell checking]]
+ - [X] [[http://www.omps.in/day-7-commands-for-human-languages-as-text-editor/][Commands for human languages]]
+ - [ ] Select the text, Copy it and rember the copied contents in registers
+ - [ ] Frames and graphical display / Multiple buffers
+ - [ ] Search and replace - regular expressions
+ - [ ] File handelling
+ - [ ] Editing compling, testing and mantaining programs
+ - [ ] Sending mail, reading mail with rmail and gnus
  - [ ] The calendar and the diary.
  - [ ] Miscellaneous commands
  - [ ] Customization.
  - [ ] EMACS as an IDE.
  - [ ] Modes.
    - [ ] IDO Mode
-   - [ ] org-mode
+   - [ ] Org-mode
      - [ ] Todo items
      - [ ] Hyperlinks
-     - [ ] tags, tables
-     - [ ] propertis and columns
+     - [ ] Tags, tables
+     - [ ] Propertis and columns
      - [ ] Date and time.
-     - [ ] AGenda views
+     - [ ] Agenda views
      - [ ] Exporting
-   - [ ] magit
-   - [ ] tramp
-   - [ ] Modes for IRC
-   - [ ] Connecting to facebook and other social network using bitlbee.
-   - [ ] Dired mode
-   - [ ] Shell 
+   - [ ] Save your work with version control using magit-mode
+   - [ ] tramp-mode
+   - [ ] Connect to IRC Modes
+   - [ ] Connect to social network using bitlbee.
+   - [ ] Emacs as File manager
+   - [ ] Access Unix Shells
