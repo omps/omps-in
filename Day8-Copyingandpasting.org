@@ -1,2 +1,23 @@
-* Day 8 - Making Selection, Copying and pasting and The Clipboard (Registers)
+* Day 8 - Other important text commands for marking,  selecting, and copying and pasting the text.
 
+** Mark and the region
+Many command in Emacs operate on parts of the current buffer, to specify the text for such commands, we need to select the text, by marking it at one end of it and move the point to the other end. This text between the point and the mark is called as "the region" or "the selection". This region always extend between the point and the mark, each time you move the point, the region changes.
+
+Setting the mark at the position also "activates" it. Emacs indicates the extent by highlighting the text within it, using the 'region' face. Further on customizing it can be found under _Face Customization_.
+
+Once the commands are run the region, Emacs automatically deactivates this region and turns off the highlighting; this can also be explicitly deactivate by typing 'C-g'. Movement commands <sethyperlink>  doesn't work on the region. The behaviour is known as Transient Mark mode. Disabling mark mode switched Emacs to an alternate behaviour. Also, when you mark something in one buffer, it doesn't have effect in anyother buffer, so while you come back you will see the mark still present at the same buffer at same location.
+
+Here are some commands for setting the mark; C is still the ctrl and M- is Meta or Alt or Esc key on your keyboard.
+
+| keybindings                  | commands                | description                                                                     |
+|------------------------------+-------------------------+---------------------------------------------------------------------------------|
+| C - SPC                      | set-mark-command        | Set the mark at point and activate it                                           |
+| C - @                        |                         | The Same                                                                        |
+| C-x C-x                      | exchange-point-and-mark | set the mark at point and activate it and move point where the mark used to be. |
+| Drag-Mouse-1                 |                         | Set the point and mark around the text you drag across.                         |
+| Mouse-3                      | move-save-then-kill     | Set the mark at point, then move point to where you click.                      |
+| Shift and cursor motion keys |                         | set the mark at point if the mark is inactive, then move point                  |
+
+OK, so now we know how to mark the text, but why really I want to do it, and learn so many combinations, when it can simply be done by holding and moving the mouse around, remind me of selecting text in browser; well, some real line usage is: say, you want to select some text and make it uppercase, so just select that area of text using any of the above key bindings and run C-x C-u, and you see all the characters becoming uppercase, neat isn't it.
+
+Oh, now I know why I need it, but it may not be everytime I want to select the text and do something with it, so I activated the mark  by mistake using the key C-SPC and now wherever I move the cursor its just getting highlighted, and I am not sure what may happen if I type something, this is a time I really hate myself to be bought in, when I know how to enter into something, but do not know how to come out without making any unknown change. C-g comes to the rescue. It just is so cool, its a saviour isn't it.
