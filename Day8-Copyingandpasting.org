@@ -1,4 +1,7 @@
-* Day 8 - Other important text commands for marking.
+#+BLOG: omps-in
+#+POSTID: 660
+#+DATE: [2014-11-08 Sat 20:05]
+#+TITLE: * Day 8 - Important text commands for marking.
 
 ** Mark and the region
 Many command in Emacs operate on parts of the current buffer, to specify the text for such commands, we need to select the text, by marking it at one end of it and move the point to the other end. This text between the point and the mark is called as "the region" or "the selection". This region always extend between the point and the mark, each time you move the point, the region changes.

@@ -1,0 +1,11 @@
+#+DATE: [2014-11-09 Sun 20:37]
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: EDITOR, EMACS
+#+TAGS: EMACS
+#+DESCRIPTION:
+#+TITLE: Day 9: copy and paste in Emacs.
+
+In Emacs, killing means erasing the text and copying it into the "kill ring". "Yanking" means bringing it back. The generalized terms for these are cutting and paste, copy and paste. Killing and yanking a text are the most common ways to move or copy text within emacs.
+
+** Commands that remove text.
+Most commands which erases text from the buffer saves it in the kill ring. These are known as "kill" commands.
