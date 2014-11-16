@@ -56,4 +56,4 @@ The are certain buffers which contain 'read-only text' which cannot be modified 
 - Yanking or pasting.
 It simply means pasting, and for theory, "Yanking means reinserting text previously killed." 
 
-The basic yanking command is 'C-y' (yank). It inserts the most recent kill, leaving the cursor at the end of the inserted text. It also sets the mark at the beginning of the inserted text, without activating it; this lets jumping to the posisition eaisly with 'C-u C-SPC'. With 'C-u C-y' it does exact opposite which means leavning the cursor in the front of the inserted text and sets the mark at the end. ON graphical display 'C-y' checks the clipboard if anyother application 
+The basic yanking command is 'C-y' (yank). It inserts the most recent kill, leaving the cursor at the end of the inserted text. It also sets the mark at the beginning of the inserted text, without activating it; this lets jumping to the posisition eaisly with 'C-u C-SPC'. With 'C-u C-y' it does exact opposite which means leavning the cursor in the front of the inserted text and sets the mark at the end. ON graphical display 'C-y' checks the clipboard if any other application 
