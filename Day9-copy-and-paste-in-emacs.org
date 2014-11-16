@@ -1,11 +1,19 @@
 #+DATE: [2014-11-09 Sun 20:37]
 #+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 #+CATEGORY: EDITOR, EMACS
-#+TAGS: EMACS
+#+TAGS: EMACS, CUT, COPY, PASTE, ORG2BLOG, 30dayschallenge, day9, DAY 9, challenege, 30 days
 #+DESCRIPTION:
-#+TITLE: Day 9: copy and paste in Emacs.
+#+TITLE: Day 9: cut, copy and paste in Emacs.
+
+As in my last post and coming posts I would be using org2blog to write content further to my blog sites and would further be writing about how to use customize it, in my later posts. This is a cool tool to use when you are writing and posting.
+
+In my earlier days of using computers, copy and pasting something was such an interesting thing to do and the most innovative thing possibly could happen to computers. we just copy things around and move on. I started using emacs some couple of years back, and using it fully only some months back. So many things I learnt and learning. Believe me today, I am amused to know the possiblities cut and paste does have. 
 
 In Emacs, killing means erasing the text and copying it into the "kill ring". "Yanking" means bringing it back. The generalized terms for these are cutting and paste, copy and paste. Killing and yanking a text are the most common ways to move or copy text within emacs.
 
 ** Commands that remove text.
-Most commands which erases text from the buffer saves it in the kill ring. These are known as "kill" commands.
+Most commands which erases text from the buffer saves it in the kill ring. These are known as "kill" commands. We usually on other editors or place also call it is cut. But Emacs, unlike other editors, stores several recents cuts and not just the last one, which makes killing a safe process, now I don't have to worry about loosing my text. Never felt this confident earlier while killing something. :) The kill ring is shared by all buffers , so the text that's killed is shared among all the buffers. 'C - /' (undo) to undo a kill comannd and bring the killed text back into the buffer, but will keep the killed buffer in the kill ring and this can also be used elsewhere.
+
+On graphical displays, killing some text back copies it to the system clipboard as well and then there are commands which kills the text but do not save it into the kill-ring are called as the delete command. 'C-d' (delete-char) and 'DEL' (delete-backward-character) will delete only one character at time, and those character which deletes only spaces or newlines, killing erase signigicant amount of nontrivial data and do a kill operation as mentioned above.
+
+
