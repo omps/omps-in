@@ -53,7 +53,13 @@ M-w and C-w are commonly used commands, which kils text in the region and save i
 The are certain buffers which contain 'read-only text' which cannot be modified and therefore cannot be killed, but the kill command still works. they move over text and save it into the kill-ring, without actually deleting the buffer. Normall, they will beep and display error message if this will happen. There may be times when we copy the similar text again, but if we change the varibale 'kill-do-not-save-duplicates' to a non-nil value, identical subsequent killls would yeild a single kill-ring entry, without duplication.
 
 
-- Yanking or pasting.
+** Yanking or pasting.
 It simply means pasting, and for theory, "Yanking means reinserting text previously killed." 
 
-The basic yanking command is 'C-y' (yank). It inserts the most recent kill, leaving the cursor at the end of the inserted text. It also sets the mark at the beginning of the inserted text, without activating it; this lets jumping to the posisition eaisly with 'C-u C-SPC'. With 'C-u C-y' it does exact opposite which means leavning the cursor in the front of the inserted text and sets the mark at the end. ON graphical display 'C-y' checks the clipboard if any other application 
+The basic yanking command is 'C-y' (yank). It inserts the most recent kill, leaving the cursor at the end of the inserted text. It also sets the mark at the beginning of the inserted text, without activating it; this lets jumping to the posisition eaisly with 'C-u C-SPC'. With 'C-u C-y' it does exact opposite which means leaving the cursor in the front of the inserted text and sets the mark at the end. ON graphical display the yank command checks the clipboard if any other application has placed any text and is more recently than the last emacs kill.
+
+- The kill ring.
+The kill ring is a list of blocks of text that were previously killed. There is only one kill ring shared by all buffers, so we can kill(cut) text from one buffer and yank(paste) it in another buffer. The maximum no. of buffer stored in kill ring is controlled by the variable 'kill-ring-max'. The default is 60. Emacs cycles the kill ring by removing the older entries if we reach the limit. The actual contents of the kill ring are stored in buffer 'kill-ring' and can be viewed using 'C-h v kill-ring'
+
+- Yank(paste)ing earlier kills.
+Numeric arguments can be used to yank a text that is no longer the most recent. If you remeber the kill entry you can eaisly yank
