@@ -1,7 +1,9 @@
+#+BLOG: omps
+#+POSTID: 682
 #+DATE: [2014-11-09 Sun 20:37]
 #+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 #+CATEGORY: EDITOR, EMACS
-#+TAGS: EMACS, CUT, COPY, PASTE, ORG2BLOG, 30dayschallenge, day9, DAY 9, challenege, 30 days
+#+TAGS: EMACS, CUT, COPY, PASTE, ORG2BLOG, 30dayschallenge, day9, DAY 9, challenege, 30 days, CUA MODE, YANK, KILL
 #+DESCRIPTION:
 #+TITLE: Day 9: cut, copy and paste in Emacs.
 
@@ -73,6 +75,7 @@ If two or more kill commands are run in a row, combines their text into a single
 | M-y         | yank-pop         | replace the text just yanked with an earlier batch of killed text |
 | C-M-w       | append-next-kill | Cause the following command if it is a kill command to append to previous kill  |
 
+
 ** Cut and paste in X.
 I have covered enough about copying, cutting and  pasting of the text, these all work expeceted in the terminal window, certain further operations are added while we are working with emacs GUI, they mainly involve usage of the OS clipboard along with the kill-ring. On a graphical display it eases us in transferring the data among other applications using clipboard. On X. two other similar facilities are available, known as primary selection and secondary selection, emacs running on the graphical system integrate with these facilities. Emacs by default uses UTF-8 encoding for interprogram text transfers. If you are not happy with the text you pasted(well, I meant the encoding here.) another coding system can be specified 'C-x RET x' or 'C-x RET X'. Let me briefly go through the available facilities.
 
@@ -109,6 +112,7 @@ M-x append-to-buffer, this reads the buffer name, then inserts a copy of the reg
 Point in that buffer is left at the end of the copied text, so successive uses of `append-to-buffer` accumulate the text in the specified buffer in the same order as they were copied.  `prepend-to-buffer` is just like `append-to-buffer` except that point in the other buffer is left before the copied text, so successive prepending happens in the reverse order.
 
 As it can append to buffer it can also accumulated the text directly to the file with 'M-x appened-to-file" only with the files which are not yet being visited to the file. because if we add it to the file we are editing in Emacs, would chnage the file behind Emacs's back and you can loose your precious editing.
+
 
 ** Rectangles
 "Rectangle" commands operate on rectangular areas of the text: and all of the characters between certain pair of columns, in a certain range of lines. In Emacs there are commands to operate on these rectangular areas, i.e to kill, yank and delete them off. These commands are useful with text in multicolumn formats, and for changing text into or out of such formats.

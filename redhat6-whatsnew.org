@@ -1,0 +1,30 @@
+#+DATE: [2014-12-04 Thu 19:11]
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: LINUX, FEATURE, WHAT'S NEW SERIES
+#+TAGS: LINUX, RHEL, Redhat 6, whats new
+#+DESCRIPTION: Whats new is being offered in #RHEL6
+#+TITLE: What's New Series: Redhat Linux 6
+
+Redhat has come with their newest version of Enterprise Linux 7 now, but many firms are still moving towards their previous version. This article will try to present new features offered in Red Hat Enterprise Linux 6 a.k.a Santiago. 
+
+With this post I am also starting a what's new series on Linux Distribution whose updated versions are launched and I will cover any new features or tools which are being offered with the new release and why should you upgrade. Due to very large base of distribution I may not be very regular, but please bear.
+
+Red Hat Enterprise Linux 6 is forked from [[http://fedoraproject.org/][Fedora 12]] and contains many backported features from Fedora 13 and 14.
+Redhat released 6 Major updates before releasing Red Hat Enterprise Linux 7. Below is the list of Updates with the version of Kernel it came along with. They have released their errata along with the release and is not present in the below table.
+
+| Date     | Update           | Kernel Version |
+|----------+------------------+----------------|
+| RHEL 6.0 | <2010-11-10 Wed> |      2.6.32-71 |
+| Update 1 | <2011-05-19 Thu> |     2.6.32-131 |
+| Update 2 | <2011-12-06 Tue> |     2.6.32-220 |
+| Update 3 | <2012-06-20 Wed> |     2.6.32-279 |
+| Update 4 | <2013-02-21 Thu> |     2.6.32-358 |
+| Update 5 | <2013-11-21 Thu> |     2.6.32-431 |
+| Update 6 | <2014-10-14 Tue> |     2.6.32-504 |
+
+Red Hat Enterprise Linux 6 is released for the following architectures.
+    -- i386
+    -- AMD64/Intel64
+    -- System z
+    -- IBM Power (64-bit) 
+
