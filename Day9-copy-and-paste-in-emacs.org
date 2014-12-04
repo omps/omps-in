@@ -18,7 +18,7 @@ On graphical displays, killing some text back copies it to the system clipboard 
 
 - Deletion : This will erase the text and not saving in the kill ringh. In emacs, usually those command used for deletion, just delete a character at a time or whitspaces. Some of the delete commands to avoid future confusion.
 
-| Kebindings | Commands                | Description                                                                                  |
+| Keybindings | Commands                | Description                                                                                  |
 |------------+-------------------------+----------------------------------------------------------------------------------------------|
 | DEL or     |                         |                                                                                              |
 | Backspace  | delete-backward-char    | Delete the previous character or text in the region                                          |
@@ -53,7 +53,7 @@ M-w and C-w are commonly used commands, which kils text in the region and save i
 The are certain buffers which contain 'read-only text' which cannot be modified and therefore cannot be killed, but the kill command still works. they move over text and save it into the kill-ring, without actually deleting the buffer. Normall, they will beep and display error message if this will happen. There may be times when we copy the similar text again, but if we change the varibale 'kill-do-not-save-duplicates' to a non-nil value, identical subsequent killls would yeild a single kill-ring entry, without duplication.
 
 
-** Yanking or pasting.
+** Commands that insert text.
 It simply means pasting, and for theory, "Yanking means reinserting text previously killed." 
 
 The basic yanking command is 'C-y' (yank). It inserts the most recent kill, leaving the cursor at the end of the inserted text. It also sets the mark at the beginning of the inserted text, without activating it; this lets jumping to the posisition eaisly with 'C-u C-SPC'. With 'C-u C-y' it does exact opposite which means leaving the cursor in the front of the inserted text and sets the mark at the end. ON graphical display the yank command checks the clipboard if any other application has placed any text and is more recently than the last emacs kill.
@@ -78,3 +78,65 @@ I have covered enough about copying, cutting and  pasting of the text, these all
 
 - Clipboard
 Its a facility that most graphical applications use for "cutting and pasting", when it exists emacs is going to use it for its kill and yank commands. When some text is killed or copied to kill-ring, the text is also placed in the clipboard. Usually, emacs wipes the clipboard clean before putting its contents in there, though this behavior can be modified by setting variable 'save-interprogram-paste-before-kill' to t. This will allow emacs to first save the contents of the clipboard to its kill-ring before deleting it from the clipboard, preventing you from loosing critical data. Yank commands too uses the clipboard, so if someother program is using the clipboard.
+
+- The Temp text selection or the Primary Selection
+When in X, there is a primary selection containing the last stretch of text selected, usually by dragging the mouse. This is usually seperate from the clipboard. The contents in this selection are changed over every new selection, whereas the clipboard changes is only possible by cutting, copying and pasting. Under X, when the region is active (i.e when primary selection is made or in other words the text is selected by dragging or clicking the mouse or by keyboard commands and moving point.)
+
+- The Secondary selection
+The X Window system provides a second facility known as the secondary selection. 
+
+| Mouse binding | Command                        | Description                                                                                                                                                                                                                                                                             |
+|---------------+--------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| M-Drag-Mouse- | mouse-set-secondary            | With one end at the place where you press down the button, and the other end at the place where you release it. This text is highlighted using the `secondary-selection` face, as you drag. The windows scrolls automatically if you drag the mouse off the top or bottom of the window |
+| M-Mouse-1     | mouse-start-secondary          | set one endpoint for the secondary selection.                                                                                                                                                                                                                                           |
+| M-Mouse-3     | mouse-secondary-save-then-kill | Set the secondary selection, with one end at the position clicked and the other at the position specified with M-Mouse-1                                                                                                                                                                |
+| M-mouse-2     | mouse-yank-secondary           | Insert the secondary selection where you click, placing point at the end of the yanked text                                                                                                                                                                                             |
+
+
+**  Accumulating text.
+The text can be moved by killing or yanking, but there are other ways that are also convinient methods for copying one block of text in many places, or for copying many scattered blocks of text in one place.
+
+| Commands              | Description                                                               |
+|-----------------------+---------------------------------------------------------------------------|
+| M-x append-to-buffer  | Apend region to the contents of a specified buffer                        |
+| M-x prepend-to-buffer | prepend region to the contents of a specified buffer                      |
+| M-x copy-to-buffer    | Copy regions into a specified buffer, deleting that buffers old contents. |
+| M-x insert-buffer     | Insert the content of a specified buffer into current buffer at point.    |
+| M-x append-to-file    | Append region to the contents of a specified file at the end.             |
+
+M-x append-to-buffer, this reads the buffer name, then inserts a copy of the region into the buffer specified. If you specify non-existent buffer, `append-to-buffer` creates the buffer. The text is inserted whenever point is in that buffer. 
+
+Point in that buffer is left at the end of the copied text, so successive uses of `append-to-buffer` accumulate the text in the specified buffer in the same order as they were copied.  `prepend-to-buffer` is just like `append-to-buffer` except that point in the other buffer is left before the copied text, so successive prepending happens in the reverse order.
+
+As it can append to buffer it can also accumulated the text directly to the file with 'M-x appened-to-file" only with the files which are not yet being visited to the file. because if we add it to the file we are editing in Emacs, would chnage the file behind Emacs's back and you can loose your precious editing.
+
+** Rectangles
+"Rectangle" commands operate on rectangular areas of the text: and all of the characters between certain pair of columns, in a certain range of lines. In Emacs there are commands to operate on these rectangular areas, i.e to kill, yank and delete them off. These commands are useful with text in multicolumn formats, and for changing text into or out of such formats.
+
+To specify a rectangle for a command to work on, set the mark at one corener and point at the opposite corener. This is called as the region-rectangle. If point and mark are in the same column, the rectangle region is considered empty.
+
+The rectangle region is controlled in much similar way as the region  is controlled. But remember that a given combination of point and mark values can be interpreted as a region or as a rectangle.
+
+| Key bindings                                   | Command                | Description                                                                                   |
+|------------------------------------------------+------------------------+-----------------------------------------------------------------------------------------------|
+| C-x r k                                        | kill-rectangle         | kill the text of the rectangle region, and saving its contents to the "last-killed-rectangle" |
+| C-x r M-w                                      | copy-rectangle-as-kill | Save the text of the region-rectangle as the last-killed-rectangle.                           |
+| C-x r d                                        | delete-rectangle       | Deletes the text of the region rectangle. The delete command works too.                       |
+| C-x r y                                        | yank-rectangle         | As the name suggests, it yanks the rectangle.                                                 |
+| C-x r o                                        | open-rectangle         | Insert blank space to fill the space of the region-rectangle.                                 |
+| C-x r N                                        | rectangle-line-numbers | Insert line numbers along the left edge of the region rectangle.                              |
+| C-x r c                                        | clear-rectangle        | CLear the region-rectangle by replacing all of its contents with spaces.                      |
+| M-x delete-whitespace-rectangle                |                        | Delete whitespaces in each of the lines on the specified rectangle.                           |
+| C-x r t STRING <RET>                           | string-rectangle       | Replace rectangle contents with STRING on each line.                                          |
+| M-x string-insert-rectangle <RET> STRING <RET> |                        | Insert string on each line of the rectangle.                                                  |
+
+
+** CUA Bindings
+Now, this is some interesting keybindings provided by emacs to its users who are migrating from windows or other editing systems. The command 'M-x cua-mode" sets up keybindings, that are compatible with the Common User Access (CUA) systems used in many other applications. When CUA mode is enabled the 'C-x', 'C-c', 'C-v', and 'C-z' invoke commands that cut (kill), copy, paste(yank), and undo respectively. The 'C-x' and 'C-c' work only on the active regions. Otherwise they still act as the prefix keys and the standard emacs commands like 'C-x C-c' still works. 
+
+To enter an Emacs command like `C-x C-f' while the mark is active, use one of the following methods: either hold `Shift' together with the prefix key, e.g., `S-C-x C-f', or quickly type the prefix key twice,e.g., `C-x C-x C-f'.
+
+CUA mode provides enhanced rectangle support with visible rectangle highlighting.  Use `C-RET' to start a rectangle, extend it using the movement commands, and cut or copy it using `C-x' or `C-c'.  `RET' moves the cursor to the next (clockwise) corner of the rectangle, so you can easily expand it in any direction.  Normal text you type is
+inserted to the left or right of each line in the rectangle (on the same side as the cursor).
+
+With CUA you can easily copy text and rectangles into and out of registers by providing a one-digit numeric prefix to the kill, copy, and yank commands, e.g., `C-1 C-c' copies the region into register `1', and `C-2 C-v' yanks the contents of register `2'.
