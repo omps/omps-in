@@ -1,0 +1,38 @@
+http://efytimes.com/e1/fullnews.asp?edid=123673
+1. Real-Time Communication Servers
+Also known as chat servers or IRC, and sometimes known as instant messaging (IM) servers, these servers are meant to allow huge number users to exchange information instantly.
+
+2. FTP Servers
+This is one of the oldest of the Internet services available. The FTP or File Transfer Protocol allows the users to securely transfer one or more files of any size between two computers.
+
+3. Collaboration Servers
+In many ways, collaboration software, once called 'groupware,' demonstrates the original power of the Web. Collaboration software designed to enable users to collaborate, regardless of location, via the Internet or a corporate intranet and to work together in a virtual atmosphere.
+
+4. List Servers
+List servers lets users better manage their mass mailing lists like open interactive discussions or one-way lists to deliver newsletters, announcements or advertising.
+
+5. Telnet Servers
+The Telnet server lets the users on to a host computer control and work on remote computers.
+
+6. Web Servers
+At its core, a Web server serves static content to a Web browser by loading a file from a disk and serving it across the network to a user's Web browser. This entire exchange is mediated by the browser and server talking to each other using HTTP.
+
+7. Virtual Servers
+A virtual server is a web server which shares its resources with multiple users. It's another way of saying that multiple web sites share the resources of one server.
+
+8. Proxy Servers
+Proxy server is a server which acts as an intermediary for requests between the users and the servers. Client connects to the proxy server and the proxy server evaluates the requests sent by the users simplifies them and control their complexities.
+
+9. Mail Servers
+Mail servers help in moving and storing the e-mail over a network via LANs and WANs or across the Internet.
+
+10. Server Platforms
+Normally used in same context with that of operating systems, server platforms are the platforms that are under the hardware or software of a system and the hence in the engine that drives the server.
+
+11. Open Source Servers
+Similar to server platforms, Open source server are referred to the underlying open source operating system used in the IT infrastructures of the companies.
+
+12. Application Servers
+Application servers are a type of middleware which connects the database servers and the app users.
+
+Courtesy: Webopedia

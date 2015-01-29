@@ -1,0 +1,73 @@
+Thank you for your support and encouragement. So here I am writing about my beginning of Day 1: part and working with EMACS.
+
+Quoting from Emacs Manual
+" Emacs is the extensible, customizable, self-documenting real-time display editor."
+
+Emacs is an advanced editor because of its ability to perform complex operations related to OS, by controlling subprocesses, indenting programs automatically, showing multiple files at once and ofcourse we can use it as text editor. 
+It is also a self-documenting means any time special command for help can be used for finding out what the particular command does.
+Emacs can be eaisly altered to behave in certain prefrence and is highly customizable.
+Emacs can go beyond simple customisation and can create entirely new commands. These new commands are simple program written in LISP. 
+
+* Downloading
+
+- Downloaded Emacs: I downloaded for MAC OS X from http://emacsformacosx.com/. I had been suggested by many sites and also from the people on IRC #emacs channel, while you are learning to use emacs, do not start with a customised emacs. I believe it could be mainly because a lot of customisations are already done for you, hence limiting you learning curve. Well, downloading and installing with OS X is pretty simple and straight, I got "Emacs Version 24.3 Universal Binary Released 2013-03-11". Double click on the installer and voilla the installation is completed on the fly.
+
+For windows and Linux you can download GNU Emacs releases from a [[http://ftpmirror.gnu.org/emacs/][nearby GNU mirror]]; or if automatic redirection does not work see the list of [[http://www.gnu.org/order/ftp.html][GNU mirrors]], or use the main [[http://ftp.gnu.org/gnu/emacs][GNU ftp server]].
+
+GNU Emacs development is hosted on [[http://savannah.gnu.org/projects/emacs/][savannah.gnu.org]].
+
+* Working with emacs
+- Starting the editor: once downloaded and installed. From the Launchpad -> emacs, clicking on which took me to the editor in its full glory, with a nice welcome message with link to the manual and the beginner emacs tutorials to get a start working with emacs and to quickly get help in emacs "C-h (Hold down Ctrl and Press h)
+
+** Few things to note and which is global to emacs.
+Control Key in emacs is denoted as 'C'.
+All or Esc Key in emacs is denoted as 'M' or referred in document as meta key.
+Shift will be denoted as 'S'.
+
+** Moving around
+Most movements in emacs can be controlled using the arrow keys but some still say it is not advisable and use of key sequences controled by Ctrl and Meta keys are advisable. below table helps in understanding the movements with these keys.
+
+| Keys    | Movement                                                    |
+| C-v     | View next screen also as Page Up.                           |
+| M-v     | Move Backward one screen or Page Down.                      |
+| C-l     | redisplay the text with cursor at the center of the screen. |
+| C-p     | Previous line or up arrow key.                              |
+| C-b     | back one character or left arrow key.                       |
+| C-f     | forward one character or right arrow key.                   |
+| C-n     | Next line or down arrow key.                                |
+| M-f     | Move one forward one word.                                  |
+| M-b     | Move back one word.                                         |
+| C-a     | Move to the beginning of the line.                          |
+| C-e     | Move to the end of the line.                                |
+| M-a     | Move to the beginning of the sentence.                      |
+| M-e     | Move to the end of the sentence.                            |
+| C-u     | to specify a repeat count.                                  |
+|         | C-v and M-v are exceptions as they won't move pages but     |
+|         | instead will scroll to that many lines forward/backward     |
+| C-g     | Kill the running command in minibffer, or in case emacs     |
+|         | stop responding.                                            |
+| C-d     | Delete the next character after the cursor cursor.          |
+| DEL     | delete the character just before the cursor.                |
+| Insert  | text insertion is as simple as typing it.                   |
+| text    | you can use the C-u to insert text as well. for eg.         |
+|         | C-u 10 - will insert ----------.                            |
+| M-<DEL> | Kill the word before the cursor.                            |
+| M-d     | Kill the word after the cursor                              |
+| C-k     | Kill from the cursor position to end of line.               |
+| M-k     | Kill to the end of current sentence.                        |
+| C-<SPC> | Set the mark, move aroung with the above keys to highlight  |
+|         | the text.                                                   |
+| C-y     | Yank the file back.                                         |
+| C-x C-f | Find file, can be used for creating a file or opening an    |
+|         | exitisitng file.                                            |
+| C-x C-s | Save the file, when you made some changes to the file and   |
+|         | want to write the same to disk or save it.                  |
+| C-x s   | Save some buffers.                                          |
+| C-x C-b | List all the opened Buffers.                                |
+| C-x b   | Switch buffer around.                                       |
+| C-x C-c | Quit Emacs.                                                 |
+
+These are some of the common keys for moving around while in emacs. It seems its really hard for getting used to it, but as I am working with emacs for sometime, I started to feel it is most obvious to be like that.
+
+I think most of the time as a beginner we could get along with using the arrow keys and we should highly discourage it and use the emacs specific keybindings to move around within emacs. Apart from bringing the emacs on and starting it up, the very important thing we should remeber is how to close it. During my initial days as emacs user I was not aware of quitting emacs, and have of the time ended in killing emacs from the process tree, now I feel so stupid. C-g and C-x C-c are the commands, which can help you all the time, while we are learning. I have heard more advanced user of emacs seldom close their emacs sessions and I may try to forget using C-x C-C again. It may take some time till I get there and stop closing my emacs and I am sure it would be more than 30 days.
+
