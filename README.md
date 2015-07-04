@@ -17,9 +17,9 @@ I have just put my broader stuff that I will be doing with emacs, but am surely 
  - [X] [[http://www.omps.in/day-5-minibuffer/][Minibuffer]]
  - [X] [[http://www.omps.in/day-6-help-undo-and-spellchecking-with-emacs/][Emacs help, UNDO and Spell checking]]
  - [X] [[http://www.omps.in/day-7-commands-for-human-languages-as-text-editor/][Commands for human languages]]
- - [ ] Select the text, Copy it and rember the copied contents in registers
- - [ ] Frames and graphical display / Multiple buffers
- - [ ] Search and replace - regular expressions
+ - [X] Select the text, Copy it and rember the copied contents in registers
+ - [X] Frames and graphical display / Multiple buffers
+ - [X] Search and replace - regular expressions
  - [ ] File handelling
  - [ ] Editing compling, testing and mantaining programs
  - [ ] Sending mail, reading mail with rmail and gnus
